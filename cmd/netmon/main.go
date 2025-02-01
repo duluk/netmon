@@ -7,7 +7,6 @@ import (
 	"log"
 	"os"
 	"os/exec"
-	// "regexp"
 	"runtime"
 	"strings"
 	"time"
@@ -15,7 +14,6 @@ import (
 	"github.com/shirou/gopsutil/v3/process"
 )
 
-// connBytes holds rx and tx byte counters as strings.
 type connBytes struct {
 	rx string
 	tx string
@@ -94,7 +92,6 @@ func main() {
 			if err != nil {
 				continue
 			}
-			// Use case-insensitive substring matching.
 			if !strings.Contains(strings.ToLower(name), strings.ToLower(appName)) {
 				// fmt.Printf("name (%s) does not contain appName (%s)\n", name, appName)
 				continue
